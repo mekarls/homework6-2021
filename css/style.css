@@ -1,35 +1,46 @@
 /*Begin your code here*/
-/*Requirement 1*/
+/*Requirement 1 -complete*/
 body{
   margin: 0;
   padding: 0;
   font-size: 16pt; 
+  font-family: 'Raleway', sans-serif;
+  background-image: url('../images/concrete_seamless.png');
 }
 
-/*Requirement 2*/
+/*Requirement 2 -complete*/
 header{
   background: #fff;
   border-bottom: 3px solid #50C7C7;
   /*Your  code here again.*/
-
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-/*Requirement 3*/
+/*Requirement 3 -complete?*/
 .nav_links{
   /*Your code here again.*/
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 
-/*Requirement 4*/
+/*Requirement 4 -finally got it lol*/
 .price{
-    min-height: 500px;
+    min-height: 400px;
     /*Your code here*/
     /*You must use flex.
     /*Don't forget to vertically and horizontally 
     align the element*/
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
 
-/*Requirement 5*/
+/*Requirement 5 -think it's complete*/
 .package {
   margin: 12px;
   background: #fff;
@@ -37,52 +48,74 @@ header{
   padding: 0 0 50px 0;
   /*Your code here.*/
   /*Take a look at flex-basis*/
-
+  flex-basis: 400px;
 }
 
-/*Requirement 6*/
-/**  UNCOMMENT THIS CODE ONCE YOU
-/**  HAVE THE SELECTOR
-{
+/*Requirement 6 -complete*/
+ /* UNCOMMENT THIS CODE ONCE YOU
+  HAVE THE SELECTOR */
+.package > header{
   background: #288080;
   border: 2px solid #45ADAD;
   padding: 20px 0;
   border-radius: 7px 7px 0 0;
-}*/
+}
 
 
-/*Requirement 7*/
+/*Requirement 7 -complete*/
 .gallery{
   min-height: 600px;
   /*Your code here again.*/
-
+  display: flex;
+  /* flex-direction: column; */
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 
-/*Requirement 8*/
+/*Requirement 8 -complete*/
 /**  UNCOMMENT THIS CODE ONCE YOU
-/**  HAVE THE SELECTOR
-{
+ HAVE THE SELECTOR **/
+.gallery > img{
   border: 10px #50C7C7 solid;
   margin: 10px;
   width: 300px;
 }
-*/
+
 
 /*Requirement 9*/
 #logo{
    /*Your code here.*/
- 
+  /* width: 25px;
+  opacity: 0; */
+  animation-name: logo_grow;
+  animation-duration: 15s;
+  animation-iteration-count: 1;
 }
 
 /*Keyframes for animation*/
 @-webkit-keyframes logo_grow{
   /*Your code here.*/
-
+  from {
+    width: 25px;
+    opacity: 0; 
+  }
+  to {
+    width: 420px;
+    opacity: 1;
+  }
 }
 
 @keyframes logo_grow{
   /*Your code here.*/
-
+  from {
+    width: 25;
+    opacity: 0; 
+  }
+  to {
+    width: 420px;
+    opacity: 1;
+  }
 } 
 
 @media screen and (min-width: 850px){
@@ -100,12 +133,28 @@ header{
   /*Requirement 11*/
   .package {
     /*Your code here again.*/
+    /* margin: 12px;
+    background: #fff;
+    border-radius: 7px;
+    padding: 0 0 50px 0;
+    /*Your code here.*/
+    /*Take a look at flex-basis*/
+    /* display: flex;
+    flex-basis: 400px;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center; */ 
   } 
 }
 
 /*Requirement 12*/
 /*Add media query to handle reduced-motion*/
 /*Your code here again.*/ 
+@media all and (prefers-reduced-motion) {
+  #logo {
+    animation: none;
+  }
+}
 
 
 
